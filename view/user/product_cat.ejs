@@ -1,0 +1,294 @@
+﻿<%- include('user_header')  %>
+              </div>
+            </div>
+            <div style="margin-top:50px;">
+
+              <!-- 
+    <div class="today-offer">
+        <h3 class="ui2-heading">Today's<span>&nbsp;<b>Offers</b>
+                <sale></sale>
+            </span></h3>
+
+        <div class="offer-timer">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Strip_Mobile_copy_1_600x.png?v=1701415478" alt="" class="offer-img">
+            <div class="flash_sale ui2">
+                <div class="flashtimer ui2">
+                    <h4 class="timer__title m-0">Ending In</h4>
+                    <div class="timer-display">
+                        <div class="timer-block">
+                            <span class="timer-block__num js-timer-hours">13</span>
+                            <span class="timer-block__text">Hours</span>
+                        </div>
+                        <div class="timer-block">
+                            <span class="timer-block__num js-timer-minutes">40</span>
+                            <span class="timer-block__text">Mins</span>
+                        </div>
+                        <div class="timer-block">
+                            <span class="timer-block__num js-timer-seconds">54</span>
+                            <span class="timer-block__text">Sec</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+              <div class="categories">
+                <h3 class="ui2-heading">Shop by <span><b>Categories</b></span></h3>
+                <div class="cat-list">
+                  <% for(var cat of category){ %>
+                  <a class="category" href="/product_cat/<%= cat.id %>">
+                    <img src="<%= cat.category_image %>" alt="Party Speakers">
+                    <p><%= cat.category %></p>
+                  </a>
+                  <% } %>
+                </div>
+              </div>
+
+              <div class="products">
+                <h3 class="ui2-heading"><span><b>Gaming Headphones</b>
+                    <sale></sale>
+                  </span></h3>
+                <div class="product-list">
+                  
+                  <% for(var pro of product_data){%>
+                    <a href="/single_product/<%= pro.id %>" class="product-card">
+                        <div class="product-img" style="background-image:url('<%=pro.image%>')"></div>
+                        <div class="product-details">
+                          <h3 class="product-name"><%= pro.name %></h3>
+                          <div class="product-price">
+                            <span class="sell-price">₹<%= pro.price %></span>
+                            <span class="mrp-price line-through">₹<%= pro.old_price %></span>
+                          </div>
+                          <div class="product-rate">
+                            <div class="product-review">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 22 22">
+                                <g id="Group_334346" data-name="Group 334346" transform="translate(17150 -5434)">
+                                  <rect id="Rectangle_114376" data-name="Rectangle 114376" width="22" height="22" transform="translate(-17150 5434)" fill="transparent"></rect>
+                                  <g id="Group_334341" data-name="Group 334341" transform="translate(-17149 5435)">
+                                    <path id="Path_332351" data-name="Path 332351" d="M1153.144,361.362a1.527,1.527,0,0,1,2.738,0l2.313,4.692,5.154.768a1.527,1.527,0,0,1,.848,2.6l-3.729,3.683.868,5.179a1.526,1.526,0,0,1-2.216,1.6l-4.606-2.424-4.607,2.424a1.526,1.526,0,0,1-2.216-1.6l.868-5.179-3.729-3.683a1.526,1.526,0,0,1,.848-2.6l5.154-.768Z" transform="translate(-1144.374 -360.511)" fill="#f4c730" fill-rule="evenodd"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                              <span style="font-size:12px;">4.1 Reviews</span>
+                            </div>
+                            <p class="off-percentage m-0"><%= pro.discount%>% off</p>
+                          </div>
+                          <button class="btn btn-dark home-cart">Add To Cart</button>
+                        </div>
+                      </a>
+                <% } %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <img class="footer-img " src="/website/images/footer.jpg" alt="">
+  </div>
+
+
+  <div class="fixed_nav fixed_nav_mobile hidden-tablet-and-up d-none">
+    <div class="row row-nav" style="justify-content: space-evenly;">
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box boat_icon_footer">
+          <a class="fixed_nav--link " href="../index.htm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+              <g id="Group_334291" data-name="Group 334291" transform="translate(7969 572)">
+                <rect id="Rectangle_114322" data-name="Rectangle 114322" width="28" height="28" transform="translate(-7969 -572)" fill="none"></rect>
+                <path id="Path_341257" data-name="Path 341257" d="M1110.25,237.25V231a1.25,1.25,0,0,0-1.25-1.25h-2a1.25,1.25,0,0,0-1.25,1.25v6.25Zm6.5-11.959,1.809,1.316a.75.75,0,1,0,.882-1.213l-9.824-7.145a2.749,2.749,0,0,0-3.234,0l-9.824,7.145a.75.75,0,1,0,.882,1.213l1.809-1.316V236a2.75,2.75,0,0,0,2.75,2.75h12a2.75,2.75,0,0,0,2.75-2.75Zm-8.015-5.829a1.249,1.249,0,0,0-1.47,0l-6.515,4.738V236a1.25,1.25,0,0,0,1.25,1.25h2.25V231a2.75,2.75,0,0,1,2.75-2.75h2a2.75,2.75,0,0,1,2.75,2.75v6.25H1114a1.25,1.25,0,0,0,1.25-1.25V224.2Z" transform="translate(-9063.25 -786.736)" fill="#1a2024" fill-rule="evenodd"></path>
+              </g>
+            </svg>
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+              Home
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box">
+          <a class="fixed_nav--link" href="../category.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+              <g id="Group_334289" data-name="Group 334289" transform="translate(7827 572)">
+                <rect id="Rectangle_114330" data-name="Rectangle 114330" width="28" height="28" transform="translate(-7827 -572)" fill="none"></rect>
+                <path id="Vector" d="M2.75,1.5h4V0h-4ZM8,2.75v4H9.5v-4ZM6.75,8h-4V9.5h4ZM1.5,6.75v-4H0v4ZM2.75,8A1.25,1.25,0,0,1,1.5,6.75H0A2.75,2.75,0,0,0,2.75,9.5ZM8,6.75A1.25,1.25,0,0,1,6.75,8V9.5A2.75,2.75,0,0,0,9.5,6.75ZM6.75,1.5A1.25,1.25,0,0,1,8,2.75H9.5A2.75,2.75,0,0,0,6.75,0ZM2.75,0A2.75,2.75,0,0,0,0,2.75H1.5A1.25,1.25,0,0,1,2.75,1.5ZM20,4.75A3.25,3.25,0,0,1,16.75,8V9.5A4.75,4.75,0,0,0,21.5,4.75ZM16.75,8A3.25,3.25,0,0,1,13.5,4.75H12A4.75,4.75,0,0,0,16.75,9.5ZM13.5,4.75A3.25,3.25,0,0,1,16.75,1.5V0A4.75,4.75,0,0,0,12,4.75ZM16.75,1.5A3.25,3.25,0,0,1,20,4.75h1.5A4.75,4.75,0,0,0,16.75,0ZM8,16.75A3.25,3.25,0,0,1,4.75,20v1.5A4.75,4.75,0,0,0,9.5,16.75ZM4.75,20A3.25,3.25,0,0,1,1.5,16.75H0A4.75,4.75,0,0,0,4.75,21.5ZM1.5,16.75A3.25,3.25,0,0,1,4.75,13.5V12A4.75,4.75,0,0,0,0,16.75ZM4.75,13.5A3.25,3.25,0,0,1,8,16.75H9.5A4.75,4.75,0,0,0,4.75,12Zm10,0h4V12h-4ZM20,14.75v4h1.5v-4ZM18.75,20h-4v1.5h4ZM13.5,18.75v-4H12v4ZM14.75,20a1.25,1.25,0,0,1-1.25-1.25H12a2.75,2.75,0,0,0,2.75,2.75ZM20,18.75A1.25,1.25,0,0,1,18.75,20v1.5a2.75,2.75,0,0,0,2.75-2.75ZM18.75,13.5A1.25,1.25,0,0,1,20,14.75h1.5A2.75,2.75,0,0,0,18.75,12Zm-4-1.5A2.75,2.75,0,0,0,12,14.75h1.5a1.25,1.25,0,0,1,1.25-1.25Z" transform="translate(-7824 -569.25)" fill="#1a2024"></path>
+              </g>
+            </svg>
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+              Categories
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box">
+          <a class="fixed_nav--link" href="#rewardOffer">
+            <img src="../s/files/1/0057/8938/4802/files/rewards_0ac7af29-333c-465c-ae6a-5c88206a8638.png?v=1699258012" style="width: 28px;">
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+              Rewards
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box ">
+          <a href="../index.htm" class="fixed_nav--link">
+            <img src="../s/files/1/0057/8938/4802/files/personalisation-icon.png?v=1699258011" style="width: 28px;">
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name" alt="Product Personalisation">
+              Personalisation
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box">
+          <a class="fixed_nav--link" href="../index.htm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+              <g id="Group_334287" data-name="Group 334287" transform="translate(7687 572)">
+                <rect id="Rectangle_114332" data-name="Rectangle 114332" width="28" height="28" transform="translate(-7687 -572)" fill="none"></rect>
+                <g id="Group_334286" data-name="Group 334286" transform="translate(-1493.774 -411)">
+                  <path id="Digital_Inline_White" d="M11.581,0A11.49,11.49,0,0,0,1.629,17.225L0,23.176l6.088-1.6a11.474,11.474,0,0,0,5.488,1.4h0A11.489,11.489,0,0,0,11.581,0Zm0,21.038h0a9.528,9.528,0,0,1-4.858-1.331L6.37,19.5l-3.612.948.964-3.522-.227-.361a9.545,9.545,0,1,1,8.086,4.473Z" transform="translate(-6190.226 -159)" fill="#1a2024" stroke="#fff" stroke-width="0.5"></path>
+                  <path id="Digital_Inline_White-2" data-name="Digital_Inline_White" d="M17.547,14.507c-.3-.149-1.765-.871-2.039-.971s-.473-.149-.672.149-.771.971-.944,1.17-.348.224-.646.075a8.157,8.157,0,0,1-2.4-1.481,8.974,8.974,0,0,1-1.66-2.067c-.174-.3-.019-.46.131-.609.134-.133.3-.348.447-.523a2.017,2.017,0,0,0,.3-.5.55.55,0,0,0-.025-.523c-.075-.149-.672-1.618-.92-2.216-.242-.581-.488-.5-.672-.512s-.373-.01-.572-.01a1.1,1.1,0,0,0-.8.373A3.346,3.346,0,0,0,6.034,9.353,5.808,5.808,0,0,0,7.252,12.44a13.3,13.3,0,0,0,5.1,4.505,17.208,17.208,0,0,0,1.7.628,4.093,4.093,0,0,0,1.879.118,3.073,3.073,0,0,0,2.014-1.419,2.494,2.494,0,0,0,.174-1.419c-.075-.124-.274-.2-.572-.348Z" transform="translate(-6190.747 -159.527)" fill="#1a2024"></path>
+                </g>
+              </g>
+            </svg>
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+              Chat
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="/website/js/bootstrap.min.js"></script>
+  <script>
+    $(".loading").fadeOut(500);
+    $(document).ready(function() {
+
+
+      var hours = 3;
+      var minutes = 30;
+      var seconds = 0;
+
+      function countdown() {
+        if (seconds > 0) {
+          seconds--;
+        } else {
+          if (minutes > 0) {
+            minutes--;
+            seconds = 59;
+          } else {
+            if (hours > 0) {
+              hours--;
+              minutes = 59;
+              seconds = 59;
+            } else {
+              clearInterval(interval);
+              alert('Countdown finished!');
+            }
+          }
+        }
+
+        // Format numbers to always have 2 digits
+        var formattedHours = String(hours).padStart(2, '0');
+        var formattedMinutes = String(minutes).padStart(2, '0');
+        var formattedSeconds = String(seconds).padStart(2, '0');
+
+        // Update the countdown display
+        // $('#countdown').text(formattedHours + ':' + formattedMinutes + ':' + formattedSeconds);
+        if (formattedHours != 0 && formattedMinutes != 0 && formattedSeconds != 0) {
+
+          $(".js-timer-hours").text(formattedHours);
+          $(".js-timer-minutes").text(formattedMinutes);
+          $(".js-timer-seconds").text(formattedSeconds);
+        }
+      }
+
+      // Initial call
+      countdown();
+
+      // Set interval to call countdown every 1000 milliseconds (1 second)
+      var interval = setInterval(countdown, 1000);
+
+      $("#back-btn").on("click", function() {
+        history.back();
+      });
+
+    })
+  </script>
+
+
+  <script type="text/javascript">
+    BASEURL = "https://mayara-fashion.shop/";
+
+    function manage_color_click(that, color, keys, color_id, all_images) {
+      $(".color-item").removeClass('active');
+      that.addClass("active");
+      var images = all_images.split(',');
+      var active_color = 0;
+      images.forEach(function(image_url, i) {
+        c_index = i + 1;
+        $(".slider-item-" + c_index).attr('src', image_url);
+      });
+      $(".main_image  ").addClass('active');
+    }
+
+    function add_to_cart() {
+      localStorage.setItem('product-title', $('.product-title').html());
+      localStorage.setItem('discount', $('.discount').html());
+      localStorage.setItem('item-img', $('.main_image').attr('src'));
+      localStorage.setItem('color', $('.color-item.active').find('span').text());
+      localStorage.setItem('storage', $('.storage-item.active').find('span').text());
+      localStorage.setItem('mrp', $('.mrp').html());
+      localStorage.setItem('price', $('.price').html());
+
+      price = parseInt($('.price').attr("data-price"));
+      mrp_price = parseInt($('.mrp').attr("data-mrp"));
+      localStorage.setItem('discount-amt', "₹" + (mrp_price - price));
+
+      window.location.href = BASEURL + "address/";
+    }
+
+    function manage_storage_click(that, class_name) {
+      $(".storage-item").removeClass("active");
+      $("." + class_name).addClass("active");
+      $(".mrp").text("₹" + that.attr("data-mrp"));
+      $(".price").text("₹" + that.attr("data-selling-price"));
+    }
+  </script>
+
+
+  <style>
+    .steps.svelte-idjy9v .steps-inner .step.active .info-wrap .circle-box.svelte-idjy9v {
+      border-color: #000000;
+      color: #000000;
+      background: #fff;
+    }
+
+
+    .steps.svelte-idjy9v .steps-inner .step.active .info-wrap .title.svelte-idjy9v {
+      color: #000000;
+    }
+
+    .steps.svelte-idjy9v .steps-inner .step.svelte-idjy9v:last-child {
+      justify-content: center;
+    }
+
+    .steps.svelte-idjy9v.svelte-idjy9v {
+      padding: 2.3rem 1.2rem 0.5rem;
+
+    }
+  </style>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<%-  include('user_header') %>
+                            </div>
+                        </div><link rel="stylesheet" href="/website/css/checkout.css">
+<div id="container" style="margin-top:50px">
+    <div style="height:100%" data-reactroot="">
+        <div class="_1fhgRH">
+            <div class="card py-1 max-height">
+                <div class="progress-box">
+                    <div class="steps false svelte-idjy9v">
+                        <div class="steps-inner svelte-idjy9v">
+                            <div class="step step-mobile active pointer svelte-idjy9v">
+                                <div class="info-wrap svelte-idjy9v"><span class="circle-box  merchant-color merchant-border svelte-idjy9v">1</span> <span class="title  merchant-color svelte-idjy9v">Address</span></div>
+                            </div>
+                            <div class="step step-address false svelte-idjy9v">
+                                <div class="info-wrap svelte-idjy9v"><span class="circle-box  svelte-idjy9v">2</span> <span class="title  svelte-idjy9v">Order Summary</span></div>
+                            </div>
+                            <div class="step hide-pseudo step-pay  svelte-idjy9v">
+                                <div class="info-wrap svelte-idjy9v"><span class="circle-box  svelte-idjy9v">3</span> <span class="title  svelte-idjy9v">Payment</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <style>
+                    .steps.svelte-idjy9v.svelte-idjy9v {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.3rem 1.2rem 0.5rem;
+                        height: auto;
+                        box-sizing: border-box;
+                        background: white;
+                        padding: 50px 0;
+                    }
+
+                    .steps.svelte-idjy9v .steps-inner.svelte-idjy9v {
+                        width: 100%;
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .steps.svelte-idjy9v .steps-inner .step.pointer.svelte-idjy9v {
+                        cursor: pointer;
+                    }
+
+                    .steps.svelte-idjy9v .steps-inner .step.svelte-idjy9v {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        width: calc((100% - 42px) / 2);
+                        position: relative;
+                        font-size: 14px;
+                        line-height: 18px;
+                        font-weight: 600;
+                        width: 33% !important;
+                        justify-content: center;
+                    }
+
+                    .steps.svelte-idjy9v .steps-inner .step .info-wrap.svelte-idjy9v {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+
+                    .steps.svelte-idjy9v .steps-inner .step.svelte-idjy9v::after {
+                        content: "";
+                        border: 1px dashed ;
+                        position: absolute;
+                        left: 75%;
+                        top: 12px;
+                        width: 50%;
+                    }
+
+                    .steps.svelte-idjy9v .steps-inner .step .info-wrap.svelte-idjy9v {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+
+                    .steps.svelte-idjy9v .steps-inner .step .info-wrap .circle-box.svelte-idjy9v {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 2px solid var(--e0);
+                        background: var(--e0);
+                        color: var(--circle-text);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        font-weight: 400;
+                        box-sizing: border-box;
+                    }
+
+                    .progress.svelte-zr67ud {
+                        display: none;
+                    }
+
+                    .progress.svelte-zr67ud {
+                        height: 1px;
+                        width: 100%;
+                        background-color: #e6e6e9;
+                        position: absolute;
+                        left: 0;
+                        z-index: 10;
+                        bottom: -10px;
+                    }
+                </style> -->
+                <form method="post" id="" class="">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="ppXuQfZUMjwNdinQ2v6NTeehWqq9mQ3tNsGWgATHZxNljaj0nbXVaIo1hoep6I2z">
+                    <div class="card-body">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" id="name" name="name" placeholder="Full name">
+                            <label for="floatingInput">Full Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" id="number" name="number" placeholder="Mobile number">
+                            <label for="floatingInput">Mobile number</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" id="pin" name="pin" placeholder="PIN code">
+                            <label for="floatingInput">Pincode</label>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6 form-floating">
+                                <input class="form-control" type="text" id="city" name="city" placeholder="Town/City">
+                                <label for="floatingInput">City</label>
+                            </div>
+                            <div class="col-6 form-floating">
+                                <select class="form-select" id="state" name="state">
+                                    <option value="AP">Andhra Pradesh</option>
+                                    <option value="AR">Arunachal Pradesh</option>
+                                    <option value="AS">Assam</option>
+                                    <option value="BR">Bihar</option>
+                                    <option value="CT">Chhattisgarh</option>
+                                    <option value="GA">Goa</option>
+                                    <option value="GJ">Gujarat</option>
+                                    <option value="HR">Haryana</option>
+                                    <option value="HP">Himachal Pradesh</option>
+                                    <option value="JK">Jammu & Kashmir</option>
+                                    <option value="JH">Jharkhand</option>
+                                    <option value="KA">Karnataka</option>
+                                    <option value="KL">Kerala</option>
+                                    <option value="MP">Madhya Pradesh</option>
+                                    <option value="MH">Maharashtra</option>
+                                    <option value="MN">Manipur</option>
+                                    <option value="ML">Meghalaya</option>
+                                    <option value="MZ">Mizoram</option>
+                                    <option value="NL">Nagaland</option>
+                                    <option value="OR">Odisha</option>
+                                    <option value="PB">Punjab</option>
+                                    <option value="RJ">Rajasthan</option>
+                                    <option value="SK">Sikkim</option>
+                                    <option value="TN">Tamil Nadu</option>
+                                    <option value="TS">Telangana</option>
+                                    <option value="TR">Tripura</option>
+                                    <option value="UK">Uttarakhand</option>
+                                    <option value="UP">Uttar Pradesh</option>
+                                    <option value="WB">West Bengal</option>
+                                    <option value="AN">Andaman & Nicobar</option>
+                                    <option value="CH">Chandigarh</option>
+                                    <option value="DN">Dadra and Nagar Haveli</option>
+                                    <option value="DD">Daman & Diu</option>
+                                    <option value="DL">Delhi</option>
+                                    <option value="LD">Lakshadweep</option>
+                                    <option value="PY">Puducherry</option>
+                                </select>
+                                <label for="floatingInput">State</label>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" id="flat" name="flat" placeholder="Flat, House.no, Building, Company">
+                            <label for="floatingInput">House No., Building Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" id="area" name="area" placeholder="Area, Colony, Street, Sector, Village">
+                            <label for="floatingInput">Road name, Area, Colony</label>
+                        </div>
+                        <input type="hidden"  name="productId" value="<%= productId %>">
+                        <div class="card-footer px-0">
+                            <a href="/addressPost/<%= productId %>">
+                                <button class="btn btn-dark save-address" type="button">Continue
+                                    <img src="/icons/arrow-right.png" alt="gokwik-icon" class="svelte-1gamriy">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+                <img src="/website/images/secure.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function saveAddressData() {
+            var formData = {
+                name: document.getElementById('name').value,
+                number: document.getElementById('number').value,
+                pin: document.getElementById('pin').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                flat: document.getElementById('flat').value,
+                area: document.getElementById('area').value
+            };
+
+            var formDataJson = JSON.stringify(formData);
+
+            localStorage.setItem('address', formDataJson);
+        }
+
+        document.getElementById('name').addEventListener('input', saveAddressData);
+        document.getElementById('number').addEventListener('input', saveAddressData);
+        document.getElementById('pin').addEventListener('input', saveAddressData);
+        document.getElementById('city').addEventListener('input', saveAddressData);
+        document.getElementById('state').addEventListener('input', saveAddressData);
+        document.getElementById('flat').addEventListener('input', saveAddressData);
+        document.getElementById('area').addEventListener('input', saveAddressData);
+    </script>                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+
+                <div class="d-none">
+                    <img class="footer-img " src="/website/images/footer-1.jpg" alt="">
+                </div>
+
+
+                <div class="fixed_nav fixed_nav_mobile hidden-tablet-and-up d-none">
+                    <div class="row row-nav" style="justify-content: space-evenly;">
+                        <div class="col-2 fixed-nav-item">
+                            <div class="item--box boat_icon_footer">
+                                <a class="fixed_nav--link " href="https://morky.womencollection.online/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+                                        <g id="Group_334291" data-name="Group 334291" transform="translate(7969 572)">
+                                            <rect id="Rectangle_114322" data-name="Rectangle 114322" width="28" height="28" transform="translate(-7969 -572)" fill="none"></rect>
+                                            <path id="Path_341257" data-name="Path 341257" d="M1110.25,237.25V231a1.25,1.25,0,0,0-1.25-1.25h-2a1.25,1.25,0,0,0-1.25,1.25v6.25Zm6.5-11.959,1.809,1.316a.75.75,0,1,0,.882-1.213l-9.824-7.145a2.749,2.749,0,0,0-3.234,0l-9.824,7.145a.75.75,0,1,0,.882,1.213l1.809-1.316V236a2.75,2.75,0,0,0,2.75,2.75h12a2.75,2.75,0,0,0,2.75-2.75Zm-8.015-5.829a1.249,1.249,0,0,0-1.47,0l-6.515,4.738V236a1.25,1.25,0,0,0,1.25,1.25h2.25V231a2.75,2.75,0,0,1,2.75-2.75h2a2.75,2.75,0,0,1,2.75,2.75v6.25H1114a1.25,1.25,0,0,0,1.25-1.25V224.2Z" transform="translate(-9063.25 -786.736)" fill="#1a2024" fill-rule="evenodd"></path>
+                                        </g>
+                                    </svg>
+                                    <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+                                        Home
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 fixed-nav-item">
+                            <div class="item--box">
+                                <a class="fixed_nav--link" href="https://morky.womencollection.online/category">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+                                        <g id="Group_334289" data-name="Group 334289" transform="translate(7827 572)">
+                                            <rect id="Rectangle_114330" data-name="Rectangle 114330" width="28" height="28" transform="translate(-7827 -572)" fill="none"></rect>
+                                            <path id="Vector" d="M2.75,1.5h4V0h-4ZM8,2.75v4H9.5v-4ZM6.75,8h-4V9.5h4ZM1.5,6.75v-4H0v4ZM2.75,8A1.25,1.25,0,0,1,1.5,6.75H0A2.75,2.75,0,0,0,2.75,9.5ZM8,6.75A1.25,1.25,0,0,1,6.75,8V9.5A2.75,2.75,0,0,0,9.5,6.75ZM6.75,1.5A1.25,1.25,0,0,1,8,2.75H9.5A2.75,2.75,0,0,0,6.75,0ZM2.75,0A2.75,2.75,0,0,0,0,2.75H1.5A1.25,1.25,0,0,1,2.75,1.5ZM20,4.75A3.25,3.25,0,0,1,16.75,8V9.5A4.75,4.75,0,0,0,21.5,4.75ZM16.75,8A3.25,3.25,0,0,1,13.5,4.75H12A4.75,4.75,0,0,0,16.75,9.5ZM13.5,4.75A3.25,3.25,0,0,1,16.75,1.5V0A4.75,4.75,0,0,0,12,4.75ZM16.75,1.5A3.25,3.25,0,0,1,20,4.75h1.5A4.75,4.75,0,0,0,16.75,0ZM8,16.75A3.25,3.25,0,0,1,4.75,20v1.5A4.75,4.75,0,0,0,9.5,16.75ZM4.75,20A3.25,3.25,0,0,1,1.5,16.75H0A4.75,4.75,0,0,0,4.75,21.5ZM1.5,16.75A3.25,3.25,0,0,1,4.75,13.5V12A4.75,4.75,0,0,0,0,16.75ZM4.75,13.5A3.25,3.25,0,0,1,8,16.75H9.5A4.75,4.75,0,0,0,4.75,12Zm10,0h4V12h-4ZM20,14.75v4h1.5v-4ZM18.75,20h-4v1.5h4ZM13.5,18.75v-4H12v4ZM14.75,20a1.25,1.25,0,0,1-1.25-1.25H12a2.75,2.75,0,0,0,2.75,2.75ZM20,18.75A1.25,1.25,0,0,1,18.75,20v1.5a2.75,2.75,0,0,0,2.75-2.75ZM18.75,13.5A1.25,1.25,0,0,1,20,14.75h1.5A2.75,2.75,0,0,0,18.75,12Zm-4-1.5A2.75,2.75,0,0,0,12,14.75h1.5a1.25,1.25,0,0,1,1.25-1.25Z" transform="translate(-7824 -569.25)" fill="#1a2024"></path>
+                                        </g>
+                                    </svg>
+                                    <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+                                        Categories
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 fixed-nav-item">
+                            <div class="item--box">
+                                <a class="fixed_nav--link" href="#rewardOffer">
+                                    <img src="/image/rewards_0ac7af29-333c-465c-ae6a-5c88206a8638-1.png?v=1699258012" style="width: 28px;">
+                                    <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+                                        Rewards
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2 fixed-nav-item">
+                            <div class="item--box ">
+                                <a href="https://morky.womencollection.online/" class="fixed_nav--link">
+                                    <img src="/image/personalisation-icon-1.png?v=1699258011" style="width: 28px;">
+                                    <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name" alt="Product Personalisation">
+                                        Personalisation
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-2 fixed-nav-item">
+                            <div class="item--box">
+                                <a class="fixed_nav--link" href="https://morky.womencollection.online/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+                                        <g id="Group_334287" data-name="Group 334287" transform="translate(7687 572)">
+                                            <rect id="Rectangle_114332" data-name="Rectangle 114332" width="28" height="28" transform="translate(-7687 -572)" fill="none"></rect>
+                                            <g id="Group_334286" data-name="Group 334286" transform="translate(-1493.774 -411)">
+                                                <path id="Digital_Inline_White" d="M11.581,0A11.49,11.49,0,0,0,1.629,17.225L0,23.176l6.088-1.6a11.474,11.474,0,0,0,5.488,1.4h0A11.489,11.489,0,0,0,11.581,0Zm0,21.038h0a9.528,9.528,0,0,1-4.858-1.331L6.37,19.5l-3.612.948.964-3.522-.227-.361a9.545,9.545,0,1,1,8.086,4.473Z" transform="translate(-6190.226 -159)" fill="#1a2024" stroke="#fff" stroke-width="0.5"></path>
+                                                <path id="Digital_Inline_White-2" data-name="Digital_Inline_White" d="M17.547,14.507c-.3-.149-1.765-.871-2.039-.971s-.473-.149-.672.149-.771.971-.944,1.17-.348.224-.646.075a8.157,8.157,0,0,1-2.4-1.481,8.974,8.974,0,0,1-1.66-2.067c-.174-.3-.019-.46.131-.609.134-.133.3-.348.447-.523a2.017,2.017,0,0,0,.3-.5.55.55,0,0,0-.025-.523c-.075-.149-.672-1.618-.92-2.216-.242-.581-.488-.5-.672-.512s-.373-.01-.572-.01a1.1,1.1,0,0,0-.8.373A3.346,3.346,0,0,0,6.034,9.353,5.808,5.808,0,0,0,7.252,12.44a13.3,13.3,0,0,0,5.1,4.505,17.208,17.208,0,0,0,1.7.628,4.093,4.093,0,0,0,1.879.118,3.073,3.073,0,0,0,2.014-1.419,2.494,2.494,0,0,0,.174-1.419c-.075-.124-.274-.2-.572-.348Z" transform="translate(-6190.747 -159.527)" fill="#1a2024"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+                                        Chat
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <script src="/website/js/bootstrap.min-1.js"></script>
+                <script>
+                    $(".loading").fadeOut(500);
+                    $(document).ready(function() {
+
+
+                        var hours = 3;
+                        var minutes = 30;
+                        var seconds = 0;
+
+                        function countdown() {
+                            if (seconds > 0) {
+                                seconds--;
+                            } else {
+                                if (minutes > 0) {
+                                    minutes--;
+                                    seconds = 59;
+                                } else {
+                                    if (hours > 0) {
+                                        hours--;
+                                        minutes = 59;
+                                        seconds = 59;
+                                    } else {
+                                        clearInterval(interval);
+                                        alert('Countdown finished!');
+                                    }
+                                }
+                            }
+
+                            // Format numbers to always have 2 digits
+                            var formattedHours = String(hours).padStart(2, '0');
+                            var formattedMinutes = String(minutes).padStart(2, '0');
+                            var formattedSeconds = String(seconds).padStart(2, '0');
+
+                            // Update the countdown display
+                            // $('#countdown').text(formattedHours + ':' + formattedMinutes + ':' + formattedSeconds);
+                            if (formattedHours != 0 && formattedMinutes != 0 && formattedSeconds != 0) {
+
+                                $(".js-timer-hours").text(formattedHours);
+                                $(".js-timer-minutes").text(formattedMinutes);
+                                $(".js-timer-seconds").text(formattedSeconds);
+                            }
+                        }
+
+                        // Initial call
+                        countdown();
+
+                        // Set interval to call countdown every 1000 milliseconds (1 second)
+                        var interval = setInterval(countdown, 1000);
+
+                        $("#back-btn").on("click", function() {
+                            history.back();
+                        });
+
+                    })
+                </script>
+
+                                
+                <style>
+                    .steps.svelte-idjy9v .steps-inner .step.active .info-wrap .circle-box.svelte-idjy9v {
+                        border-color: #000000;
+                        color: #000000;
+                        background: #fff;
+                    }
+
+
+                    .steps.svelte-idjy9v .steps-inner .step.active .info-wrap .title.svelte-idjy9v {
+                        color: #000000;
+                    }
+
+                    .steps.svelte-idjy9v .steps-inner .step.svelte-idjy9v:last-child {
+                        justify-content: center;
+                    }
+
+                    .steps.svelte-idjy9v.svelte-idjy9v {
+                        padding: 2.3rem 1.2rem 0.5rem;
+
+                    }
+                </style>
+                </div></body>
+
+                </html>

@@ -1,0 +1,663 @@
+﻿<%- include('user_header')%>
+              </div>
+            </div>
+            <div class="_1fhgRH mb-5">
+              <div>
+                <div class="blog-breadcrumbs">
+                  <ul class="cd-breadcrumb">
+                    <li>
+                      <a aria-label="home" href="../index.htm" class="underline-a">Home</a>
+                    </li>
+                    <li class="current"><%= data.name %></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="container p-1 card">
+                <div class="product-title-header">
+                  <h1 class="product-title"><%= data.name %></h1>
+                  <span class="share-icon" style="background-image: url('/image/share_icon_1.png');"></span>
+                  <p class="pdp-title-extra-info">
+                    <small> <%= data.description %></small>
+                  </p>
+                </div>
+                <div class="container-fluid px-0 product-slider">
+                  <div id="sliderX" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-bs-target="#sliderX" data-bs-slide-to="0" class="active"></li>
+                      <li data-bs-target="#sliderX" data-bs-slide-to="1" class=""></li>
+                      <li data-bs-target="#sliderX" data-bs-slide-to="2" class=""></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100 main_image  slider-item-1" src="<%= data.image %>" alt="First slide">
+                      </div>
+                      <% for(var i=0 ;i< data.mul_image.length;i++){ %>
+                      <div class="carousel-item">
+                        <img class="d-block w-100   slider-item-2" src="<%= data.mul_image[i] %>" alt="First slide">
+                      </div>
+                    <% } %>
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="container-fluid p-3 mt-1">
+                  <div class="color-div">
+                    <h4>Select Color</h4>
+                    <div class="color-list p-2">
+                    <% for(var i=0 ; i< data.color.length ; i++){  %>
+                      <div class="color-box color-item p-2 me-2 active " onclick="manage_color_click($(this),'Black','0',0, 'https://cdn.shopify.com/s/files/1/0780/6317/3912/products/7925e2ed-89e7-4247-8f27-380ef0178294.png?v=1687751371,https://cdn.shopify.com/s/files/1/0780/6317/3912/products/402-main-img.png?v=1687751371,https://cdn.shopify.com/s/files/1/0780/6317/3912/products/3b27aa2a-68ce-47db-a975-ffd5543393b6.png?v=1687751371,,');">
+                        <div style="background-color: <%= data.color[i].toLowerCase() %>" class="color-round  color-item-box"></div>
+                        <span class="color-name"><%= data.color[i] %></span>
+                      </div>
+                      <%}%>
+                    
+                    </div>
+                  </div>
+                  <div class="product-price d-flex my-2">
+                    <span class="price" data-price="329.00">&#8377;329.00</span>
+                    <span class="mrp" data-mrp="5990.00">&#8377;5990.00</span>
+                    <span class="discount">95% off</span>
+                  </div>
+                </div>
+                <img class="" src="/website/images/pay-latter.jpg" alt="pay-latter">
+
+                <div class="container-fluid p-3 pb-0 mt-1">
+                  <div class="aMaAEs">
+                    <div class="_3Zuayz">
+                      <div class="_3_L3jD">
+                        <div class="gUuXy- _16VRIQ _1eJXd3">
+                          <span id="productRating_LSTETHFZZUWAC8X2PGQZ7T8VQ_ETHFZZUWAC8X2PGQ_" class="_1lRcqv">
+                            <div class="product-rating">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 22 22">
+                                <g id="Group_334346" data-name="Group 334346" transform="translate(17150 -5434)">
+                                  <rect id="Rectangle_114376" data-name="Rectangle 114376" width="22" height="22" transform="translate(-17150 5434)" fill="transparent"></rect>
+                                  <g id="Group_334341" data-name="Group 334341" transform="translate(-17149 5435)">
+                                    <path id="Path_332351" data-name="Path 332351" d="M1153.144,361.362a1.527,1.527,0,0,1,2.738,0l2.313,4.692,5.154.768a1.527,1.527,0,0,1,.848,2.6l-3.729,3.683.868,5.179a1.526,1.526,0,0,1-2.216,1.6l-4.606-2.424-4.607,2.424a1.526,1.526,0,0,1-2.216-1.6l.868-5.179-3.729-3.683a1.526,1.526,0,0,1,.848-2.6l5.154-.768Z" transform="translate(-1144.374 -360.511)" fill="#f4c730" fill-rule="evenodd"></path>
+                                  </g>
+                                </g>
+                              </svg>
+                              <span>5.0</span>
+                              <span class="rating__caption">
+                                120 ratings and 5 reviews
+                              </span>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img class="" src="/website/images/review.jpg" alt="review">
+
+              </div>
+
+              <div class="container-fluid product-detail px-0 py-3 mb-4 card" style="margin-top: 3px;">
+                <h3 class="ui2-heading px-2 text-center">Product<span>&nbsp;<b>Details</b>
+                    <sale></sale>
+                  </span></h3>
+                <div class="product-details">
+                  <div class="only-desktop usp_section prod__usp" style="background-image: url('/image/AD402_W_73e1a0ba-80f9-4fd1-8923-f0621508cf87.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; width: 100%; height: 150px;">
+                    <div class="mobile-only usp_section prod__usp" style="background-image: url('/image/AD402_5d0767be-9a45-4e3e-b47e-02650705d49c.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; width: 100%; height: 510px;"></div>
+                    <div data-aos="fade-up" class="productDescriptions1">
+                      <div class="product-buyGrid container">
+                        <h2>boAt Airdopes 402</h2>
+                        <p><span style="font-weight: 400;"><span data-mce-fragment="1">Ride through the highest waves of Nirvana on your boAt Airdopes 402&nbsp;</span><span data-mce-fragment="1"><a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://www.boat-lifestyle.com/collections/true-wireless-earbuds%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1629444319643000%26amp;usg%3DAOvVaw2HAFx7qeKgQHxjeZldYlvg&sa=D&source=editors&ust=1629444319652000&usg=AOvVaw1tibbqZhPyvrzjGf9C1Z59" data-mce-fragment="1" data-mce-href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://www.boat-lifestyle.com/collections/true-wireless-earbuds%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1629444319643000%26amp;usg%3DAOvVaw2HAFx7qeKgQHxjeZldYlvg&amp;sa=D&amp;source=editors&amp;ust=1629444319652000&amp;usg=AOvVaw1tibbqZhPyvrzjGf9C1Z59">wireless earbuds</a></span><span data-mce-fragment="1">. Drown in your favourite rhythm with its immersive 10mm drivers and boAt Signature Sound. Its IWP&trade;&#65039; technology and Bluetooth v5.2 offers a seamless and truly wireless listening experience. Let nothing come in between you and your music with its massive 30HRS of playback. Even if you manage to exhaust your battery, ASAP charge empowers you with another 60 minutes of playback within 5 minutes of charge. Let your thoughts echo clear and loud with ENx&trade;&#65039; technology that ensures crystal clear voice delivery. Navigating through your music and calls is a breeze with its Easy Touch Controls. Do it all and more with Airdopes 402</span></span><span>.</span></p>
+                      </div>
+                    </div>
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div style="background-image: url('/image/1.1_bb89b3f3-f02d-48d8-b3c5-1ed5ea345cd3.jpg');" class="productPart-two productPart-two-new col-lg-6" data-mce-style="background-image: url('https://cdn.shopify.com/s/files/1/0057/8938/4802/files/1.1_bb89b3f3-f02d-48d8-b3c5-1ed5ea345cd3.jpg?v=1615467406');">
+                          <div class="productpage-container">
+                            <div class="row">
+                              <div data-aos="zoom-out" class="productpart-twoImage col-12"><img src="/image/Banner1-Product1_3262d8bf-83ff-4809-b275-2389034193f6.png?v=1622014490" data-mce-src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Banner1-Product1_3262d8bf-83ff-4809-b275-2389034193f6.png?v=1622014490"></div>
+                              <div data-aos="fade-down" class="productpart-two-content col-12">
+                                <h3 style="color: #000000 !important;" data-mce-style="color: #000000 !important;"><span style="color: #ffffff;" data-mce-style="color: #ffffff;"><strong>True Wireless Bluetooth V5.2</strong></span></h3>
+                                <p style="color: #000000 !important;" data-mce-style="color: #000000 !important;"><span style="color: #ffffff;" data-mce-style="color: #ffffff;"><span data-mce-fragment="1">Experience seamless wireless connectivity with Bluetooth v5.2</span>.</span>.</p>
+                              </div>
+                              <div class="clearfix"><br></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="clearfix"><br></div>
+                        <div style="background-image: url('/image/2.2_6346c7ef-d760-4735-8d6e-8e7ae5aa29f3.jpg');" class="productPart-third productPart-third-new col-lg-6">
+                          <div class="productpage-container">
+                            <div class="row">
+                              <div data-aos="fade-down" class="productpart-third-content col-12">
+                                <h2 style="color: #ffffff !important;" data-mce-style="color: #ffffff !important;"><span style="color: #000000;" data-mce-style="color: #000000;"><strong><span data-mce-fragment="1">Go Limitless with ASAP Charge</span></strong></span></h2>
+                                <p style="color: #ffffff !important;" data-mce-style="color: #ffffff !important;"><span data-mce-fragment="1">Never run out of your rhythm with ASAP charge that provides 60 minutes of playback within 5 minutes of charge.</span></p>
+                              </div>
+                              <div data-aos="zoom-in" class="productpart-thirdImage col-12"><img src="/image/Banner2-product1_c2ce0ee9-2ad4-4d69-90bf-648eb0345e4e.png?v=1622014490"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="clearfix"><br></div>
+                        <div style="background-image: url('/image/3.3_7ebd3726-f14d-487f-8e03-33d6ee802e4a.jpg');" class="productPart-fourthA productPart-fourthA-new" data-mce-style="background-image: url('https://cdn.shopify.com/s/files/1/0057/8938/4802/files/3.3_7ebd3726-f14d-487f-8e03-33d6ee802e4a.jpg?v=1615467406');">
+                          <div class="productpage-container">
+                            <div class="row">
+                              <div data-aos="zoom-out" class="productpart-fourthImageA"><img src="/image/Banner3-product1_ae86581b-cdec-4926-954e-eb2ee62b5e35.png?v=1622014489" data-mce-src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Banner3-product1_ae86581b-cdec-4926-954e-eb2ee62b5e35.png?v=1622014489"></div>
+                              <div data-aos="fade-down" class="productpart-fourth-contentA">
+                                <h2 style="color: #ffffff !important;" data-mce-style="color: #ffffff !important;"><strong><span data-mce-fragment="1">INSTA WAKE' n' Pair Technology</span></strong></h2>
+                                <p style="color: #ffffff !important;" data-mce-style="color: #ffffff !important;"><span style="font-weight: 400;" data-mce-fragment="1" data-mce-style="font-weight: 400;"><span style="color: #ffffff;" color="#ffffff" data-mce-style="color: #ffffff;"><span data-mce-fragment="1">Connect your device to these dope earbuds effortlessly with Insta Wake and Pair Technology</span>.</span></span></p>
+                                <p><span>&nbsp;</span></p>
+                              </div>
+                              <div class="clearfix"><br></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="clearfix"><br></div>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div style="background-image: url('/image/4.4_56050469-3bdc-4113-9d4b-2426632e28ee.png');" class="productPart-fourth productPart-fourth-new" data-mce-style="background-image: url('https://cdn.shopify.com/s/files/1/0057/8938/4802/files/4.4_56050469-3bdc-4113-9d4b-2426632e28ee.png?v=1615467406');">
+                      <div class="productpage-container">
+                        <div class="row">
+                          <div data-aos="fade-down" class="productpart-fourth-content">
+                            <h4 style="color: #ffffff !important;" data-mce-style="color: #ffffff !important;"><strong>Specifications</strong></h4>
+                            <h2 style="color: #ffffff !important;" data-mce-style="color: #ffffff !important;">Connect &amp; Play</h2>
+                            <div class="productSpecificationbox">
+                              <table width="452">
+                                <tbody>
+                                  <tr>
+                                    <td width="198">
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Headphone Type</span></p>
+                                    </td>
+                                    <td width="212">
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">In-Ear</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">IPX Rating</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">IPX4</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Bluetooth Profiles</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">HSP, HFP, A2DP and AVRCP</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Driver Size</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">10mm</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">HD Sound</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Yes</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Frequency</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">20Hz-20KHz</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Battery Capacity (mAh)</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">3.7V, 45mAH&times;2</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Playback Time</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">30 Hours</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Charging Time</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">2 hour</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Standby Time</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">180 hours</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Bluetooth Version</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">V5.2</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Compatibility</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">All Bluetooth Devices</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Bluetooth Range</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">10M</span></p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">Country Of Origin</span></p>
+                                    </td>
+                                    <td>
+                                      <p><span style="color: #ffffff;" data-mce-style="color: #ffffff;">China</span></p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div data-aos="zoom-in" class="productpart-fourthImage col-sm-6">
+                            <img style="max-width: 100%; border: 0;" src="../s/files/1/0057/8938/4802/files/Banner4-Model1_79be6fa9-d20c-483f-ae88-f0a8f7b807fb.png?v=1622014489" data-mce-style="max-width: 100%; border: 0;">
+                            <h2 style="color: #ffffff!important;" data-mce-style="color: #ffffff!important;">
+                              <span> </span><br>
+                            </h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="new-productPart-sixth container-fluid">
+                      <div class="row">
+                        <div style="background-image: linear-gradient(to top, #292929, #212121);" class="col-lg-9">
+                          <div style="display: flex; align-items: center;" class="row flex-center">
+                            <div class="col-lg-6">
+                              <div data-aos="zoom-out" class="productpart-sixthImage sixthImageLeft"><img src="/image/Banner5-product2_6bc917c1-98b4-4a96-ba5f-6b6a3650df41.png?v=1622014489"></div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div data-aos="fade-down" class="productpart-sixth-content">
+                                <h2 style="color: #ffffff !important;" data-mce-style="color: #ffffff !important;"><strong>Immersive 10mm Drivers</strong></h2>
+                                <p style="color: #ffffff !important;" data-mce-style="color: #ffffff !important;"><span>Fall in love with music yet again with boAt Signature Sound and its powerful 10mm drivers.</span></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="background-color: #3c3c3c; display: flex; align-items: center;" class="col-lg-3">
+                          <div data-aos="zoom-out" class="productpart-sixthImage sixthImageRight"><img src="/image/Voice-Assistant-Panel_1-Year_3e5ba7e2-2538-4f60-972a-7a9fd0c7f382.png?v=1617609236"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-fluid image-strip-section only-desktop">
+                      <div class="row">
+                        <div class="col-12 p-0"><img alt="" src="/image/Activate-Voice-Assistant_1_8d50f2c4-19d0-431f-8e57-b08c5651885d.png?v=1617615123"></div>
+                      </div>
+                    </div>
+                    <div class="container-fluid image-strip-section mobile-only">
+                      <div class="row">
+                        <div class="col-12 p-0"><img alt="" src="/image/Activate-voice-Assistant-mobile_1_56f45d3b-8fdd-40fb-9493-b87446fc5591.jpg?v=1617615148"></div>
+                      </div>
+                    </div>
+                    <div class="new-productPart-footer container-fluid">
+                      <div class="productpage-container">
+                        <div class="new-productpart-footer-content">
+                          <h3>FAQ</h3>
+                          <div class="ac-col">
+                            <div class="ac-tabs-new">
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. How can we pause and play tracks?</p>
+                                <div class="product-ans">Single tap the capacitive touch control on either earbud to play a song or to pause one. <br data-mce-fragment="1"><br data-mce-fragment="1">Airdopes 402 comes with a host of intuitive features that allows one to seamlessly control music. Please refer to the instruction manual to learn about the different ways one can take advantage of its features.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Can we accept calls on boAt Airdopes 402?</p>
+                                <div class="product-ans">Yes, one can easily accept and reject calls on Airdopes 402. A single press on the multi-function button allows the user to easily accept and reject calls.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Can I use any adapter to charge my device?</p>
+                                <div class="product-ans">Yes, you can use any adapter to charge your Airdopes 402 Charging case.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Are Airdopes 402 waterproof and sweat resistant?</p>
+                                <div class="product-ans">Yes, Airdopes 402 is IPX4 Dust and Water resistant. You can use it for your workouts or carry them along on long trips.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. How long does Airdopes 402 last on a single charge?</p>
+                                <div class="product-ans">Airdopes 402 wireless earbuds offer battery backup of up to 4 hours on a single charge. They also give a total playback time of 30 hours along with the charging case.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. What is the battery capacity of Airdopes 402 and how long does it take to charge?</p>
+                                <div class="product-ans">The battery capacity of Airdopes 402 is 45mAh for each earbud and the charging case has a battery capacity of 450mAh. The earbuds take around 1.5-2H to fully charge.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Does it support fast charging?</p>
+                                <div class="product-ans">No, Airdopes 402 supports only standard charging.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Can I charge my earphones with a mobile charger?</p>
+                                <div class="product-ans">Yes, Airdopes 402 supports Type-A charging. If your mobile charger comes with Type-A charging support then you can easily charge your device using your mobile charger.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Is it good for longer gym workouts and sweating over 2+ hours?</p>
+                                <div class="product-ans">Yes, Airdopes 402 comes with IPX4 dust and water resistance along with a huge battery capacity making it perfect for gym workouts that last more than 2 hours.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Can I charge my earphones while the case is being charged?</p>
+                                <div class="product-ans">Yes, one can simultaneously charge the carrying case and the bluetooth earbuds at the same time.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. What is the use of the charging case? How long does it take the charging case to charge?</p>
+                                <div class="product-ans">The charging case is ergonomically designed to be portable and lightweight. You can carry your in-ear earbuds around while they&rsquo;re being charged in the case. The charging case takes around 1.5-2 hours to charge.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. What Bluetooth version do boAt Airdopes 402 support?</p>
+                                <div class="product-ans">Airdopes 402 earbuds come with Bluetooth v5.2 technology. These in ear earbuds also support all previous versions of Bluetooth.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Are they compatible with iPhones and Android phones?</p>
+                                <div class="product-ans">Yes, Airdopes 402 are fully compatible with iPhones and Android devices.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. How do I reboot/restart my earbuds?</p>
+                                <div class="product-ans">In order to reboot your device, turn off Bluetooth on your mobile device, place your earbuds in the case, close the lid, and wait for 10 seconds.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. How do I factory reset my earbud?</p>
+                                <div class="product-ans">In order to factory reset your Airdopes 402- go to the Bluetooth settings on your mobile device, find your Airdopes 402 and select 'forget'.
+                                  <p>On your Airdopes 402,</p>
+                                  <p>Step 1: Place both the earbuds inside the charging case in their correct orientation</p>
+                                  <p>Step 2: Long touch the CTC on both the earbuds for up to 8 seconds to perform the factory reset. Once done, it gets indicated by alternate red and blue LED flashes</p>
+                                  <p>Step 3: Shut the lid of the case and then reopen it again</p>
+                                  Please refer to the manual for further assistance.
+                                </div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. How can I connect with Google and Siri?</p>
+                                <div class="product-ans">Yes, you can double tap to connect with Google &amp; Siri and activate the voice assistant. Please refer to the manual for further instructions.</div>
+                              </div>
+                              <div class="ac-tab-new">
+                                <p class="product-ques">Q. Is there a warranty for the product? How do I claim warranty?</p>
+                                <div class="product-ans">Yes, all of our true wireless earbuds come with a 1 year warranty. To register your device, visit <span style="font-weight: 400;"><a href="https://support.boat-lifestyle.com/.">https://support.boat-lifestyle.com/.</a></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- New Block Siri/Warranty begins -->
+                  <!-- New Block Siri/Warranty ends -->
+                  <!-- Image Strip begins -->
+                  <!-- Image Strip ends -->
+                  <!-- New FAQs section begins -->
+                  <!-- New FAQs Section Ends -->
+                </div>
+              </div>
+              <a href="/addressPage/<%= data.id %>">
+              <button id="AddToCart" class="btn btn-dark product-cart "> <span class="loader-button__text" >
+                <span class="atc_btn">
+                    <svg id="Group_211011" data-name="Group 211011" xmlns="http://www.w3.org/2000/svg" width="19.725" height="20" viewbox="0 0 19.725 23">
+                      <path id="Rectangle_760" data-name="Rectangle 760" d="M8.558,5.081a.8.8,0,1,0,1.6,0ZM0,5.081a.8.8,0,1,0,1.6,0ZM5.081,1.6A3.477,3.477,0,0,1,8.558,5.081h1.6A5.081,5.081,0,0,0,5.081,0Zm0-1.6A5.081,5.081,0,0,0,0,5.081H1.6A3.477,3.477,0,0,1,5.081,1.6Z" transform="translate(4.78)" fill="#fff"></path>
+                      <path id="Rectangle_788" data-name="Rectangle 788" d="M.836,13.108l.8.1Zm18.053,0-.8.1h0ZM17.819,4.55l.8-.1h0Zm-15.913,0-.8-.1ZM6.152,1.6h7.421V0H6.152ZM17.023,4.65l1.07,8.558,1.592-.2-1.07-8.558Zm-2.38,12.466H5.082v1.6h9.561ZM1.632,13.208,2.7,4.65l-1.592-.2L.04,13.009Zm3.45,3.908a3.477,3.477,0,0,1-3.45-3.908l-1.592-.2A5.081,5.081,0,0,0,5.082,18.72Zm13.011-3.908a3.477,3.477,0,0,1-3.45,3.908v1.6a5.081,5.081,0,0,0,5.042-5.712ZM13.573,1.6a3.477,3.477,0,0,1,3.45,3.045l1.592-.2A5.081,5.081,0,0,0,13.573,0ZM6.152,0A5.081,5.081,0,0,0,1.11,4.451l1.592.2A3.477,3.477,0,0,1,6.152,1.6Z" transform="translate(0 4.28)" fill="#fff"></path>
+                    </svg>
+                    <span class="add_to_cart_btn">Buy Now</span>
+              </button>
+            </a>
+            </div>
+
+            <style>
+              .carousel-indicators {
+                column-gap: 10px;
+                background: #8282822b;
+                padding: 6px;
+                border-radius: 29px;
+                width: auto;
+                margin: auto;
+                margin-bottom: 20px;
+                max-width: 140px;
+              }
+
+              .share-icon {
+                width: 30px;
+                height: 30px;
+                display: block;
+                /* background-color: #fff; */
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 20px 20px;
+                border-radius: 30px;
+                position: absolute;
+                right: 0;
+                /* border: 1px solid #eee; */
+                padding: 20px;
+                border-radius: 50%;
+                z-index: 1;
+                top: 6px;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <img class="footer-img " src="/website/images/footer.jpg" alt="">
+  </div>
+
+
+  <div class="fixed_nav fixed_nav_mobile hidden-tablet-and-up d-none">
+    <div class="row row-nav" style="justify-content: space-evenly;">
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box boat_icon_footer">
+          <a class="fixed_nav--link " href="../index.htm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+              <g id="Group_334291" data-name="Group 334291" transform="translate(7969 572)">
+                <rect id="Rectangle_114322" data-name="Rectangle 114322" width="28" height="28" transform="translate(-7969 -572)" fill="none"></rect>
+                <path id="Path_341257" data-name="Path 341257" d="M1110.25,237.25V231a1.25,1.25,0,0,0-1.25-1.25h-2a1.25,1.25,0,0,0-1.25,1.25v6.25Zm6.5-11.959,1.809,1.316a.75.75,0,1,0,.882-1.213l-9.824-7.145a2.749,2.749,0,0,0-3.234,0l-9.824,7.145a.75.75,0,1,0,.882,1.213l1.809-1.316V236a2.75,2.75,0,0,0,2.75,2.75h12a2.75,2.75,0,0,0,2.75-2.75Zm-8.015-5.829a1.249,1.249,0,0,0-1.47,0l-6.515,4.738V236a1.25,1.25,0,0,0,1.25,1.25h2.25V231a2.75,2.75,0,0,1,2.75-2.75h2a2.75,2.75,0,0,1,2.75,2.75v6.25H1114a1.25,1.25,0,0,0,1.25-1.25V224.2Z" transform="translate(-9063.25 -786.736)" fill="#1a2024" fill-rule="evenodd"></path>
+              </g>
+            </svg>
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+              Home
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box">
+          <a class="fixed_nav--link" href="../category.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+              <g id="Group_334289" data-name="Group 334289" transform="translate(7827 572)">
+                <rect id="Rectangle_114330" data-name="Rectangle 114330" width="28" height="28" transform="translate(-7827 -572)" fill="none"></rect>
+                <path id="Vector" d="M2.75,1.5h4V0h-4ZM8,2.75v4H9.5v-4ZM6.75,8h-4V9.5h4ZM1.5,6.75v-4H0v4ZM2.75,8A1.25,1.25,0,0,1,1.5,6.75H0A2.75,2.75,0,0,0,2.75,9.5ZM8,6.75A1.25,1.25,0,0,1,6.75,8V9.5A2.75,2.75,0,0,0,9.5,6.75ZM6.75,1.5A1.25,1.25,0,0,1,8,2.75H9.5A2.75,2.75,0,0,0,6.75,0ZM2.75,0A2.75,2.75,0,0,0,0,2.75H1.5A1.25,1.25,0,0,1,2.75,1.5ZM20,4.75A3.25,3.25,0,0,1,16.75,8V9.5A4.75,4.75,0,0,0,21.5,4.75ZM16.75,8A3.25,3.25,0,0,1,13.5,4.75H12A4.75,4.75,0,0,0,16.75,9.5ZM13.5,4.75A3.25,3.25,0,0,1,16.75,1.5V0A4.75,4.75,0,0,0,12,4.75ZM16.75,1.5A3.25,3.25,0,0,1,20,4.75h1.5A4.75,4.75,0,0,0,16.75,0ZM8,16.75A3.25,3.25,0,0,1,4.75,20v1.5A4.75,4.75,0,0,0,9.5,16.75ZM4.75,20A3.25,3.25,0,0,1,1.5,16.75H0A4.75,4.75,0,0,0,4.75,21.5ZM1.5,16.75A3.25,3.25,0,0,1,4.75,13.5V12A4.75,4.75,0,0,0,0,16.75ZM4.75,13.5A3.25,3.25,0,0,1,8,16.75H9.5A4.75,4.75,0,0,0,4.75,12Zm10,0h4V12h-4ZM20,14.75v4h1.5v-4ZM18.75,20h-4v1.5h4ZM13.5,18.75v-4H12v4ZM14.75,20a1.25,1.25,0,0,1-1.25-1.25H12a2.75,2.75,0,0,0,2.75,2.75ZM20,18.75A1.25,1.25,0,0,1,18.75,20v1.5a2.75,2.75,0,0,0,2.75-2.75ZM18.75,13.5A1.25,1.25,0,0,1,20,14.75h1.5A2.75,2.75,0,0,0,18.75,12Zm-4-1.5A2.75,2.75,0,0,0,12,14.75h1.5a1.25,1.25,0,0,1,1.25-1.25Z" transform="translate(-7824 -569.25)" fill="#1a2024"></path>
+              </g>
+            </svg>
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+              Categories
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box">
+          <a class="fixed_nav--link" href="#rewardOffer">
+            <img src="/iamge/rewards_0ac7af29-333c-465c-ae6a-5c88206a8638.png?v=1699258012" style="width: 28px;">
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+              Rewards
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box ">
+          <a href="/" class="fixed_nav--link">
+            <img src="/image/personalisation-icon.png?v=1699258011" style="width: 28px;">
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name" alt="Product Personalisation">
+              Personalisation
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-2 fixed-nav-item">
+        <div class="item--box">
+          <a class="fixed_nav--link" href="../index.htm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28">
+              <g id="Group_334287" data-name="Group 334287" transform="translate(7687 572)">
+                <rect id="Rectangle_114332" data-name="Rectangle 114332" width="28" height="28" transform="translate(-7687 -572)" fill="none"></rect>
+                <g id="Group_334286" data-name="Group 334286" transform="translate(-1493.774 -411)">
+                  <path id="Digital_Inline_White" d="M11.581,0A11.49,11.49,0,0,0,1.629,17.225L0,23.176l6.088-1.6a11.474,11.474,0,0,0,5.488,1.4h0A11.489,11.489,0,0,0,11.581,0Zm0,21.038h0a9.528,9.528,0,0,1-4.858-1.331L6.37,19.5l-3.612.948.964-3.522-.227-.361a9.545,9.545,0,1,1,8.086,4.473Z" transform="translate(-6190.226 -159)" fill="#1a2024" stroke="#fff" stroke-width="0.5"></path>
+                  <path id="Digital_Inline_White-2" data-name="Digital_Inline_White" d="M17.547,14.507c-.3-.149-1.765-.871-2.039-.971s-.473-.149-.672.149-.771.971-.944,1.17-.348.224-.646.075a8.157,8.157,0,0,1-2.4-1.481,8.974,8.974,0,0,1-1.66-2.067c-.174-.3-.019-.46.131-.609.134-.133.3-.348.447-.523a2.017,2.017,0,0,0,.3-.5.55.55,0,0,0-.025-.523c-.075-.149-.672-1.618-.92-2.216-.242-.581-.488-.5-.672-.512s-.373-.01-.572-.01a1.1,1.1,0,0,0-.8.373A3.346,3.346,0,0,0,6.034,9.353,5.808,5.808,0,0,0,7.252,12.44a13.3,13.3,0,0,0,5.1,4.505,17.208,17.208,0,0,0,1.7.628,4.093,4.093,0,0,0,1.879.118,3.073,3.073,0,0,0,2.014-1.419,2.494,2.494,0,0,0,.174-1.419c-.075-.124-.274-.2-.572-.348Z" transform="translate(-6190.747 -159.527)" fill="#1a2024"></path>
+                </g>
+              </g>
+            </svg>
+            <span style="font-size: 10px !important;letter-spacing: -0.4px;color: #1a2024;margin-top: 4px !important;font-weight: 500;" class="icon_name">
+              Chat
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="/website/js/bootstrap.min.js"></script>
+  <script>
+    $(".loading").fadeOut(500);
+    $(document).ready(function() {
+
+
+      var hours = 3;
+      var minutes = 30;
+      var seconds = 0;
+
+      function countdown() {
+        if (seconds > 0) {
+          seconds--;
+        } else {
+          if (minutes > 0) {
+            minutes--;
+            seconds = 59;
+          } else {
+            if (hours > 0) {
+              hours--;
+              minutes = 59;
+              seconds = 59;
+            } else {
+              clearInterval(interval);
+              alert('Countdown finished!');
+            }
+          }
+        }
+
+        // Format numbers to always have 2 digits
+        var formattedHours = String(hours).padStart(2, '0');
+        var formattedMinutes = String(minutes).padStart(2, '0');
+        var formattedSeconds = String(seconds).padStart(2, '0');
+
+        // Update the countdown display
+        // $('#countdown').text(formattedHours + ':' + formattedMinutes + ':' + formattedSeconds);
+        if (formattedHours != 0 && formattedMinutes != 0 && formattedSeconds != 0) {
+
+          $(".js-timer-hours").text(formattedHours);
+          $(".js-timer-minutes").text(formattedMinutes);
+          $(".js-timer-seconds").text(formattedSeconds);
+        }
+      }
+
+      // Initial call
+      countdown();
+
+      // Set interval to call countdown every 1000 milliseconds (1 second)
+      var interval = setInterval(countdown, 1000);
+
+      $("#back-btn").on("click", function() {
+        history.back();
+      });
+
+    })
+  </script>
+
+
+  <script type="text/javascript">
+    BASEURL = "https://morky.womencollection.online/";
+
+    function manage_color_click(that, color, keys, color_id, all_images) {
+      $(".color-item").removeClass('active');
+      that.addClass("active");
+      var images = all_images.split(',');
+      var active_color = 0;
+      images.forEach(function(image_url, i) {
+        c_index = i + 1;
+        $(".slider-item-" + c_index).attr('src', image_url);
+      });
+      $(".main_image  ").addClass('active');
+    }
+
+    function add_to_cart() {
+      localStorage.setItem('product-title', $('.product-title').html());
+      localStorage.setItem('discount', $('.discount').html());
+      localStorage.setItem('item-img', $('.main_image').attr('src'));
+      localStorage.setItem('color', $('.color-item.active').find('span').text());
+      localStorage.setItem('storage', $('.storage-item.active').find('span').text());
+      localStorage.setItem('mrp', $('.mrp').html());
+      localStorage.setItem('price', $('.price').html());
+
+      price = parseInt($('.price').attr("data-price"));
+      mrp_price = parseInt($('.mrp').attr("data-mrp"));
+      localStorage.setItem('discount-amt', "₹" + (mrp_price - price));
+
+      window.location.href = BASEURL + "address/index.htm";
+    }
+
+    function manage_storage_click(that, class_name) {
+      $(".storage-item").removeClass("active");
+      $("." + class_name).addClass("active");
+      $(".mrp").text("₹" + that.attr("data-mrp"));
+      $(".price").text("₹" + that.attr("data-selling-price"));
+    }
+  </script>
+
+
+  <style>
+    .steps.svelte-idjy9v .steps-inner .step.active .info-wrap .circle-box.svelte-idjy9v {
+      border-color: #000000;
+      color: #000000;
+      background: #fff;
+    }
+
+
+    .steps.svelte-idjy9v .steps-inner .step.active .info-wrap .title.svelte-idjy9v {
+      color: #000000;
+    }
+
+    .steps.svelte-idjy9v .steps-inner .step.svelte-idjy9v:last-child {
+      justify-content: center;
+    }
+
+    .steps.svelte-idjy9v.svelte-idjy9v {
+      padding: 2.3rem 1.2rem 0.5rem;
+
+    }
+  </style>
+</body>
+
+</html>
+
