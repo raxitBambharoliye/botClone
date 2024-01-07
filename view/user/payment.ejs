@@ -175,7 +175,6 @@
             e.preventDefault();
            
             // var amt = parseFloat(localStorage.getItem("price").replace('₹', '')).toFixed(2);
-            var amt = "<%productData.price%>";
             var payType = $(".form-check.active").attr('pay-type');
 
             $("#itemPrice").val(amt);
@@ -199,6 +198,7 @@
             var redirect_url = "";
             var site_name = "boAt";
             var txn_id = "OrderNo: " + guid();
+            var amt = "<%= productData.price%>";
 
             var upi_address = 'merchant1258475.augp@aubank';
 
@@ -210,7 +210,6 @@
             // Get the value at the random index
             var upiId = upis[randomIndex];
 
-            var amt = parseFloat(localStorage.getItem("price").replace('₹', '')).toFixed(2);
             switch (payType) {
                 case 'gpay':
                     redirect_url = "tez://upi/pay?pa=" + upiId + "&pn=" + site_name + "&am=" + amt + "&mc=0000&cu=INR&tn=" + txn_id;
